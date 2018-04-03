@@ -1,0 +1,23 @@
+.for_st{
+	   margin: auto;
+		width:300px;
+		height:330px;	
+		margin-bottom:-6px;
+	}
+div{
+	padding:50px;
+	float:left;
+}
+	
+#mydiv{
+	margin-left: 100px;
+}
+
+.s_item1{
+	font-family: Times New Roman;
+	font-size:40px;
+	color:white;
+	width:300px;
+	background-color:black;
+	text-align:center;
+	}

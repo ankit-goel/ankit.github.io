@@ -1,0 +1,61 @@
+
+	<div class="mycartbcg">
+
+<div>
+	<a href="home" ><p id="side_1">&#60Continue Shopping</a>
+	
+	<input type="submit" value="&#128274 CHECKOUT" id="cbuy2">
+</div>
+<br>
+<form method="post">
+<table cellpadding="10px" style="margin-left: 80px;" ng-hide="hidetable">
+
+	<thead>
+	<tr>
+		<th style="padding-left: 100px;border-bottom-style: ridge;font-size: 25px;"><strong style="margin-left: 20px;" class="glyphicon glyphicon-shopping-cart">MyCart</strong></th>
+		
+		<th style="color: white;border-bottom-style: ridge;margin-bottom: 90px;">Name</th>
+		<th style="padding-left: 30em; border-bottom-style: ridge;"><strong>Price</strong></th>
+		<th style="padding-left: 20px; border-bottom-style: ridge;"><strong>QTY</strong></th>
+		<th style="padding-left: 20px; border-bottom-style: ridge;"><strong>Total</strong></th>
+		
+		
+	</tr>
+	</thead>
+	
+		<tbody ng-repeat="pro in card_data">
+		<tr>
+			<td style="padding-left: 100px;"><img ng-src="{{pro.image_url}}" class="cartpic1"></td>
+			<td >
+			<p style="font-weight: bold;font-size: 20px;">{{pro.Name}}</p>
+			<br>
+			<button style="margin-top: 10px;margin-right: 5px;" ng-click="delCookie(pro.id)">Remove</button>
+			
+			</td>
+			<td style="padding-left: 30em;">{{pro.price| currency : '&#8377;'}}</td>
+			<td >{{pro.qty}}</td>
+			<td>{{pro.price*pro.qty | currency : '&#8377;'}}</td>
+		<!--<td><button ng-click="delCookie(pro.id)">remove</button></td>-->
+			</tr>
+			
+			
+		
+			</tbody>
+			<tfoot>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				<td style="font-size: 25px;margin-left: -10px;" >Total: {{ getTotal() | currency : '&#8377;' }}</td>
+				</tr>
+			</tfoot>
+</table>
+
+
+<img ng-src="img/secure/ssl.png" id="sec" alt="100%Secure">
+
+<input type="submit" ng-click="alertme()" value="&#128274 CHECKOUT" id="cbuy1">
+</form>
+
+</div>

@@ -1,0 +1,80 @@
+<div class="maintoto">
+<div id="buy_10"><h4 id="togobk"><a href="home">HOME</a>/<a href="shirt">SHIRT</a>/<a id="nmae">{{buyctrl.b_name.Name}}</a></h4></div>
+<div align="left" id="buy_ki_top" style="width:550px;">
+<div class="polaroida">
+
+
+
+	<img ng-src="{{buyctrl.b_name.image_url}}" alt="your_item" id="buy_ki_timg"/>
+		<br>
+		<img ng-src="{{buyctrl.b_name.image_url}}" alt="more_pics" id="send_img">
+		</div>
+		<p style="font-size: 20px;text-align: justify;margin-left: 70px; margin-top: 10px;">
+  I'm a product description. I’m a great place to include more information about your product. Buyers like to know what they’re getting before they purchase.</p>
+	
+	</div>
+	
+	<div id="finallybuy" >
+		<p id="buyn"><strong>{{buyctrl.b_name.Name}}</strong></p>
+		
+		<p id="buyc">{{buyctrl.b_name.Price | currency : '&#8377;'}}</p>
+		
+	<p id="buyr"><strong >	Color: </strong>{{buyctrl.b_name.Colour}}</p>
+		
+		<p>Size:</p>
+		<!--  ANIMATION  IN DROP DOWN-->
+		<select  class="selectsize" ng-model="mysize" ng-dropdown required  ng-options="x.size for x in data">
+</select>
+		
+		<br>
+		<br>
+		
+		Quantity:
+		<br>
+		<br>
+		<input type="number" value="1" max="10" min="1" id="buy_ka_no" >
+		<br>
+		<input type="submit" value="ADD TO CART" id="buy1"  ng-click="openNav(buyctrl.b_name.id,buyctrl.b_name.Name,buyctrl.b_name.Price,buyctrl.b_name.image_url)">
+		<hr width="500px;">
+		<br>
+		<p><strong>PRODUCT INFO</strong></p>
+		<br>
+		<p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.</p>
+		<br>
+		<p><strong>RETURN AND REFUND POLICY</strong></p>
+		<br>
+		<p>Im a Return and Refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+		<hr width="500px;">
+		<div align="center">
+		<img ng-src="{{fbuy}}" alt="facebook">
+		<img ng-src="{{tbuy}}" alt="twitter">
+  		<img ng-src="{{gbuy}}" alt="facebook">
+		<img ng-src="{{pbuy}}" alt="facebook">
+ 		</div>
+	</div>
+	
+	<div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+  
+  <p style="color: white" align="center">CART</p>
+  <br>
+  
+  <div ng-repeat="pro in card_data" align="center">
+ 		<div id="cook_tt">
+		
+			<img ng-src="{{pro.image_url}}" id="cook_img">
+			
+			<p class="cook_prop">{{pro.Name}}</p>
+			<p class="cook_prop">Price:{{pro.price}}</p>
+			<p class="cook_prop">Qty:{{pro.qty}}</p>
+			<p class="cook_prop">Total:{{pro.price*pro.qty}}</p>
+			<br>
+			<hr width="80%" color="white" >
+			</div>
+			<a href="cart">TAKE ME TO CART</a>
+</div>
+
+</div>
+
+
+</div>

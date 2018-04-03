@@ -1,0 +1,45 @@
+<header id="back" ng-controller="header as headd" >
+	    <div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					
+				
+	    <div class="header">
+			 <h1 id="htopic">DREAMLAND</h1>
+		
+	<nav class="navbar navbar-expand-lg navbar-default">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="home"><p class="hmebtn">Home</p><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+		  <a class="nav-link" href="#"><p class="hmebtn">Product</p></a>
+      </li>
+      <li class="nav-item">
+		  <a class="nav-link" href="cart"><p class="hmebtn">Cart</p><span class="glyphicon glyphicon-shopping-cart"></span></a>
+      </li>
+      <li class="nav-item">
+		  <a class="nav-link" href="contact"><p class="hmebtn">Contact US</p></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="text" placeholder="Search..." title="Search Your Dream Product" ng-model="searchText" >
+      <ul ng-repeat="mysrch in headd.srh_rst | filter:searchText" ng-show="searchText">
+      	<li >{{mysrch.Name}}</li>
+      </ul>
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit" title="Click To Search" id="">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+		</div>
+	</div>
+			</div>
+    </div>
+	</header>

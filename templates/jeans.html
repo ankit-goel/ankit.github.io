@@ -1,0 +1,56 @@
+
+	<div class="maintoto">
+
+		<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+				<div class="col-md-12">
+				
+				<div class="row">
+				<h4 class="togobk"><a href="home">HOME</a>/<a class="nmae">JEANS</a></h4>	
+				
+				<br>
+					<div id="jns_ka_header" align="center"><strong>JEANS</strong></div>
+
+			
+				
+		<div id="upr_jb1">			
+	<select  class="selectsizedrop" ng-model="mysort" ng-change="updateData()">
+				<option ng-repeat="x in datadrop" value="{{x.value}}">{{x.size}}</option> 
+	</select>
+		</div>	
+				</div>	
+					</div>
+				</div>	
+			<div id="item10" >
+
+
+				<div class="toside">
+				<table>
+
+						<a  ng-repeat="e in jitctrl.jkb_name  | limitTo : 1" href="jeans_buy/{{e.id}}"><tr>  <img  class="for_st" ng-src="{{e.image_url}}" alt="Shirts">  </tr>  </a>
+
+						<td  ng-repeat="e in jitctrl.jkb_name  | limitTo : 1"  class="s_item1">{{e.Name}}     {{e.Price | currency : '&#8377;'  }}</td> 
+
+					</table>
+				</div>
+
+
+
+				<div  class="toside">
+					<table>
+				<a ng-repeat="e in jitctrl.jkb_name  | limitTo : 1:1" href="jeans_buy/{{e.id}}"> <tr> <img  class="for_st" ng-src="{{e.image_url}}" alt="Shirts"></tr></a>
+					<td ng-repeat="e in jitctrl.jkb_name  | limitTo : 1:1"  class="s_item1">{{e.Name}} {{e.Price | currency : '&#8377;'}}</td>
+				</table>
+				</div>
+
+
+			</div> 
+	</div>
+</div>
+</div>
+
+	</div>
+
+	
